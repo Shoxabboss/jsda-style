@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-Do List App - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="images/icon.png" alt="Icon"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()" >Add</button>
+            </div>
+            <ul id="list-container">
+            </ul>
+        </div>
+    </div>
+    
+    <footer style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #6366f1, #9333ea);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  ">
+    <span>🚀 Crafted by <strong>Shohabbos</strong></span>
+    <span style="opacity: 0.8; font-size: 12px;">© 2025 All rights reserved.</span>
+  </footer>
+  <div class="background-layer"></div>
+  <div class="background-overlay"></div>
+  
+  <div class="container">
+    
+
+  </div>
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const x = 50 + (e.clientX / window.innerWidth - 0.5) * 8; 
+      const y = 50 + (e.clientY / window.innerHeight - 0.5) * 8;
+  
+      document.body.style.backgroundPosition = `${x}% ${y}%`;
+      document.body.style.backgroundSize = "115%";
+    });
+  
+    document.addEventListener("mouseleave", () => {
+      document.body.style.backgroundPosition = "50% 50%";
+      document.body.style.backgroundSize = "110%";
+    });
+  </script>
+  
+    <script src="/script.js"></script>
+  
+  
+</body>
+</html>
